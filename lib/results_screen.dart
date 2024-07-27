@@ -1,6 +1,7 @@
 import 'package:adv_basics/data/questions_answers.dart';
 import 'package:adv_basics/questions_summary.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.choseAnswers});
@@ -40,8 +41,13 @@ class ResultsScreen extends StatelessWidget {
           children: [
             Text(
               'You answerd $numCorrectQuestions out of $numTotalQuestions questions correctly!',
+              style: GoogleFonts.poppins(
+                color: const Color.fromARGB(255, 197, 158, 231),
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             QuestionsSummary(summaryData),
             const SizedBox(height: 20),
             OutlinedButton.icon(
