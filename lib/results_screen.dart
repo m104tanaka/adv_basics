@@ -41,6 +41,7 @@ class ResultsScreen extends StatelessWidget {
           children: [
             Text(
               'You answerd $numCorrectQuestions out of $numTotalQuestions questions correctly!',
+              textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 color: const Color.fromARGB(255, 197, 158, 231),
                 fontSize: 24,
@@ -52,7 +53,8 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(height: 20),
             OutlinedButton.icon(
             icon: const Icon(Icons.restart_alt, color: Colors.white),
-            onPressed: () {},
+            onPressed: () {
+            },
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
